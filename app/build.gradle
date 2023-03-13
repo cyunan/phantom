@@ -32,12 +32,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        dataBinding true
+    }
 }
 
 dependencies {
 
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation project(":common")
+    implementation project(":p_webview")
     kapt rootProject.googleAutoServiceDependency
     implementation rootProject.googleAutoServiceDependency
 //    implementation project(":usercenter")
