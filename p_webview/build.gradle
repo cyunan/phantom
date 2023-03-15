@@ -32,6 +32,16 @@ android {
     buildFeatures {
         dataBinding true
     }
+    //添加此代码可以解决viewBinding时不时爆红的问题
+    sourceSets {
+        debug {
+            java.srcDirs = ['src/main/java', 'build/generated/data_binding_base_class_source_out/debug/out']
+        }
+    }
+
+    kapt {
+        correctErrorTypes true
+    }
 }
 
 dependencies {
@@ -42,4 +52,5 @@ dependencies {
     kapt rootProject.googleAutoServiceDependency
     implementation rootProject.googleAutoServiceDependency
     implementation project(":common")
+//    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
 }

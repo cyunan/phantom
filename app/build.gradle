@@ -35,6 +35,12 @@ android {
     buildFeatures {
         dataBinding true
     }
+    //添加此代码可以解决viewBinding时不时爆红的问题
+    sourceSets {
+        debug {
+            java.srcDirs = ['src/main/java', 'build/generated/data_binding_base_class_source_out/debug/out']
+        }
+    }
 }
 
 dependencies {
@@ -42,6 +48,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation project(":common")
     implementation project(":p_webview")
+    implementation project(":base")
     kapt rootProject.googleAutoServiceDependency
     implementation rootProject.googleAutoServiceDependency
 //    implementation project(":usercenter")

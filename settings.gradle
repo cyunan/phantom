@@ -10,9 +10,22 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        maven { allowInsecureProtocol = true
+            url "https://jitpack.io" }
+
     }
 }
 rootProject.name = "phantom"
 include ':app'
 include ':common'
 include ':p_webview'
+include ':base'

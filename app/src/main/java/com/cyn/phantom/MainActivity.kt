@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<Button>(R.id.btn_run).setOnClickListener {
-            mWebViewService?.startWebViewActivity(this, "https://www.baidu.com")
+            mWebViewService?.startWebViewActivity(this, "https://www.baidu.com","title", true)
         }
     }
 }
