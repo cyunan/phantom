@@ -15,5 +15,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btn_run).setOnClickListener {
             mWebViewService?.startWebViewActivity(this, "https://www.baidu.com","title", true)
         }
+        findViewById<Button>(R.id.btn_demo).setOnClickListener {
+            mWebViewService?.startWebViewActivity(this, "file:///android_asset/demo.html","title", true)
+        }
     }
 }

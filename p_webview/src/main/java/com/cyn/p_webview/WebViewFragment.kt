@@ -61,8 +61,8 @@ class WebViewFragment : Fragment(), OnRefreshListener, WebViewCallBack{
             mLoadService.showCallback(LoadingCallback::class.java)
             mBinding.webview.settings.javaScriptEnabled = true
             mBinding.webview.reload()
-
         }
+
         mBinding.smartFreshLayout.setOnRefreshListener(this)
         mBinding.smartFreshLayout.setEnableRefresh(mCanNativeRefresh)
         mBinding.smartFreshLayout.setEnableLoadMore(false)
