@@ -26,9 +26,9 @@ xiangxuejs.takeNativeAction = function(commandname, parameters){
     request.param = parameters;
     if(window.xiangxuejs.os.isAndroid){
         console.log("android take native action" + JSON.stringify(request));
-        window.xiangxuewebview.takeNativeAction(JSON.stringify(request));
+        window.sdkwebview.takeNativeAction(JSON.stringify(request));
     } else {
-        window.webkit.messageHandlers.xiangxuewebview.postMessage(JSON.stringify(request))
+        window.webkit.messageHandlers.sdkwebview.postMessage(JSON.stringify(request))
     }
 }
 
@@ -41,9 +41,9 @@ xiangxuejs.takeNativeActionWithCallback = function(commandname, parameters, call
     request.param = parameters;
     request.param.callbackname = callbackname;
     if(window.xiangxuejs.os.isAndroid){
-        window.xiangxuewebview.takeNativeAction(JSON.stringify(request));
+        window.sdkwebview.takeNativeAction(JSON.stringify(request));
     } else {
-        window.webkit.messageHandlers.xiangxuewebview.postMessage(JSON.stringify(request))
+        window.webkit.messageHandlers.sdkwebview.postMessage(JSON.stringify(request))
     }
 }
 

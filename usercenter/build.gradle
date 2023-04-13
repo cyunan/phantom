@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.cyn.p_webview'
+    namespace 'com.cyn.usercenter'
     compileSdk rootProject.compileSdk
 
     defaultConfig {

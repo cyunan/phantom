@@ -10,5 +10,6 @@ ext {
     minSdk = 21
     targetSdk = 32
     googleAutoServiceDependency = 'com.google.auto.service:auto-service:1.0-rc7'
+    constraintlayout = 'androidx.constraintlayout:constraintlayout:2.1.4'
 
 }

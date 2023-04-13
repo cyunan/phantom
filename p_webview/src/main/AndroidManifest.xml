@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:usesCleartextTraffic="true">
@@ -7,7 +9,9 @@
             android:name=".WebViewActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:process=":webveiw"/>
+            android:process=":webview"/>
+
+        <service android:name=".mainprocess.MainProcessCommandService"/>
     </application>
 
 </manifest>
